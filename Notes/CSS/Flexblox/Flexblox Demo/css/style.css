@@ -1,0 +1,101 @@
+/*--Here, 1rem = 10px. <html> font size and other important values (like box-sizing) are declared in modnorm.min.css. --*/
+body {
+  background-color: #DADADA; /*-- background color for outermost container  --*/
+  padding: 2rem; /*-- padding is shorthand for -top, -right, -bottom, and -left --*/
+  /*--
+  margin: 2rem; use this to show the difference between margin and padding --*/
+  border: 3px dotted green; /*-- border shorthand property --*/
+  color: #333; /*-- text color is inherited by child elements --*/
+}
+h2 {
+  font-size: 2.5rem; /*-- by default, headings are larger, but this makes them a little bigger still --*/
+  font-weight: 900; /*-- by default headings are bold, but this makes them the boldest--*/
+  color: #555; /*-- makes heading text a lighter color gray --*/
+  margin-top: 1rem; /*-- adds space outside the border on the top--*/
+  margin-bottom: 1rem; /*-- adds space outside the border on the bottom --*/
+  /*--
+  margin: 1rem auto;    a shorter way to write the previous two rules--*/
+}
+p {
+  margin-bottom: 1em; /*-- adds space between multiple paragraphs --*/
+}
+strong {
+  text-transform: uppercase; /*-- makes strong elments all-caps --*/
+}
+.parent {/*--flex container styles --*/
+  margin-bottom: 2rem;
+  height: 300px; /*-- sets height for demo purposes --*/
+  background: #FAFAFA; /*-- sets background to light gray --*/
+  padding: 1rem; /*-- adds 1em of padding all around --*/
+  border: 2px dashed blue;
+  /*-- change styles below this line --*/
+  display: flex; /*-- sets the display mode--*/
+  flex-direction: row; /*-- sets direction row or column --*/
+  justify-content: space-between; /*-- aligns content on main axis --*/
+  align-items: center; /*-- aligns content on secondary axis --*/
+  flex-wrap: nowrap; /*-- determines whether content wraps or not --*/
+}
+/*-- flex items --*/
+.left {/*-- styles for first column --*/
+  background-color: blanchedalmond;
+  flex-grow: 0; /*-- sets the relative rate at which the item grows --*/
+  flex-shrink: 1; /*-- sets the relative rate at which the item shrinks --*/
+  flex-basis: auto; /*-- sets the ideal size of the flex item --*/
+/*--flex: 0 1 auto; /*-- shorthand for above 3 properties, use this! --*/
+  order: 0; /*-- sets the order in which the flex item appears --*/
+}
+.center {/*-- styles for second column --*/
+  background-color:azure;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+/*--flex: 0 1 auto; /*-- shorthand for above 3 properties, use this! --*/
+  order: 0;
+}
+.right {/*-- styles for third column --*/
+  background-color:lavender;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+/*--flex: 0 1 auto; /*-- shorthand for above 3 properties, use this! --*/
+  order: 0;
+}
+.children {/*--common columns styles --*/
+  border: 2px solid red;
+  padding: 1rem;
+  text-align: center; /*-- Aligns only the text --*/
+}
+/*--block-container styles --*/
+.block-container {
+  display: block; /*-- sets the display mode to block --*/
+  background: #FAFAFA;
+  padding: 1rem;
+  border: 2px dashed purple;
+  width: 50%; /*-- sets the width equal to half the container size --*/
+  margin: 2rem auto; /*-- auto equalizes left and right margins --*/
+}
+.first {
+  background-color: blanchedalmond;
+  float: none;
+}
+.second {
+  background-color:lavender;
+  float: none;
+}
+.clearfix {
+  clear: both; /*--prevents floated elements from escaping their container--*/
+}
+/*-- Media Queries --*/
+/*--only come into effect when screen is less than 768px wide --*/
+/*--
+@media screen and (max-width: 768px) {
+  .parent {
+    flex-direction:column;
+  }
+  .children {
+    width: 100%;
+  }
+  .block-container {
+    width: 80%;
+  }
+}--*/

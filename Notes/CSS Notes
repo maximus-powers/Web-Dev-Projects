@@ -1,0 +1,25 @@
+CSS Inheritance
+    Child elements inherit properties from parents. Set properties on high-level elements
+
+Cascade:
+    Rules that come later override earlier ones
+    Rules that are more specific override more general ones
+
+Selectors:
+    Search al elements for a match
+    if it finds a match, rules take effect
+    Look up a list of selectors to find how to make different types of selections. Like children, sudo classes, etc 
+
+Normal Flow:
+    All elements are rectangles (called box model), laid out in sequence, from top to bottom, left to right
+    Padding is on inside of border, margin is on outside
+    
+    display: block; Stacked rectangles
+    display: inline; Rectangles next to eachother
+
+CSS Positioning:
+    Static
+    Relative
+    Absolute
+    Fixed
+
