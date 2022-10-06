@@ -3,108 +3,114 @@
   <head>
     <title>Tribute Page Project</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/516d4dc6bc.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <main id="landingpage">
         <nav><!-- main menu -->
           <ul>
-            <li><a href="#">Lorem</a></li>
-            <li><a href="#">Ipsum</a></li>
-            <li><a href="#" class="active">Dolor</a></li>
-            <li><a href="#">Sit</a></li>
-            <li><a href="#">Ament</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#method">Methodology</a></li>
+            <li><a href="#train">Train</a></li>
+            <li><a href="#events">Events</a></li>
+            <li style="float:right"><a href="#about">About Me</a></li>
           </ul>
         </nav>
         
         <header><!-- Hero chunk -->
             <div class="container">
-                <img src="img/tale.jpg" alt="Hero img" style="width:100%;">
+                <img src="img/banner.jpg" alt="Hero img" style="width:100%;">
                 <div class="centered">
-                    <h1>Your Main Proposition</h1>
-                    <h2>And a Clarifying Bit Here</h2>
+                    <h1>A New Generation of Athlete</h1> 
+                    <h2 class='large'>Brian Dobens Coaching</h2>
+                    <button>Train Me <i class="fa-solid fa-person-running"></i></button>
                 </div>
-                </div>
+              </div>
         </header>
 
         <div class="banner"> <!-- Banner below hero -->
             <span>
-            <h1>1</h1>
-            <h2>The Three Main</h2>
+            <h1 style="color: #9e9e9e">1</h1>
+            <h2>Athletic Development</h2>
             </span>
       
             <span>
-            <h1>2</h1>
-            <h2>Reasons Why the</h2>
+            <h1 style="color: #9e9e9e">2</h1>
+            <h2>Functional Training</h2>
             </span>
       
             <span>
-            <h1>3</h1>
-            <h2>Proposition's True</h2>
+            <h1 style="color: #9e9e9e">3</h1>
+            <h2>Holistic Approach</h2>
             </span>
         </div>
         
           <article> <!-- Copy chunk -->
               <div class='artChunks'> <!-- First Image -->
                 <figure>
-                    <img src="img/tale.jpg" alt="img 1" />
+                    <img src="img/brian.jpg" alt="Brian Dobens" />
                 </figure>
                 <div class='artFigText'>
-                  <h2>First Reason in Depth<h2>
-                  <p class=small>Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah</p>
+                  <h2>Athletic Development Coach: Brian Dobens<h2>
+                  <p class=small>27+ years of training, a Division I track career, a degree in Exercise and Movement, and 19+ years as a professional chef formed my unique perspective on optimizing the human body</p>
                 </div>
               </div>
 
               <div class='artChunks'> <!-- Second Image -->
                 <figure>
-                    <img src="img/tale.jpg" alt="img 2" />
+                    <img src="img/functional.jpg" alt="Crossfit" />
                 </figure>
                 <div class='artFigText'>
-                  <h2>Second Reason in Depth<h2>
-                  <p class=small>Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah</p>
+                  <h2 class="artTitle">Functional Strength Methodology<h2>
+                  <p class=small>Body builders train for size, and power lifters train for strength. I believe in training movements that apply to your athletic needs</p>
                 </div>
               </div>
 
               <div class='artChunks'> <!-- Third Image -->
                 <figure>
-                    <img src="img/tale.jpg" alt="img 3" />
+                    <img src="img/smoothie.jpg" alt="img 3" />
                 </figure>
                 <div class='artFigText'>
-                  <h2>Third Reason in Depth<h2>
-                  <p class=small>Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah</p>
+                  <h2>From Nutrition to Training<h2>
+                  <p class=small>All my coaching is highly personalized. I look at your specific situation, needs, and goals, then built a holistic plan to get your there</p>
                 </div>
               </div>
 
             </article>
-        '
+        
           <div class='learnMore'> <!-- Learn more... -->
             <div>
                 <h1>Learn More...</h1>
             </div>
 
-            <div class='learnMoreText'>
-              <div>
-                 <p>Blah Blah Blah Blah Blah Blah Blah Blah Blah</p>
+            <div class='learnMoreBody'>
+              <div class='learnMoreText'>
+                 <p class="large">"Brian gave me some of the best workouts I've ever had. He taught me so much along the way that I could apply to my training outside our sessions."</p>
+                 <p class="small">- Maximus Powers (Basketball, University of Essex)</p>
               </div>
             
-              <div>
-                  <li>Point 1 blah blah</li>
-                  <li>Point 2 blah blah</li>
-                  <li>Point 3 blah blah</li>
+              <div class="learnMoreList">
+                <h3>Ask Me About</h3>
+                <li>Upcoming cross country races</li>
+                <li>Athletes I've trained</li>
+                <li>My unique perspectives on fitness, nutrition, etc.</li>
               </div>
             </div>
 
-            <h2 class="newsHeader">Join Our Newsletter</h2>
+
+            <h2 class="formHeader">Get in Touch</h2>
             <form> <!-- Newsletter -->
               <input type="text" placeholder="Name" />
               <input type="email" placeholder="Email Address" />
-              <input type="submit" value="Subscribe" />
+              <input type="text" placeholder="Message" />
+              <input type="submit" value="Send" />
             </form>
 
           </div>
 
         <footer> <!-- Copyright -->
-          <h3>&copy; 2022 Powers Productions</h3>
+          <h4>&copy; 2022 Powers Productions</h4>
         </footer>
 
     </main>
