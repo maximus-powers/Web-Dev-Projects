@@ -1,5 +1,6 @@
-Base Code from:
+This is a library of website components in HTML and CSS, that can be referred to as I build future websites.
 
+Base Code from:
 Buttons: 
 uiverse.io
 
