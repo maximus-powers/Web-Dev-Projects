@@ -1,0 +1,510 @@
+html {
+	font-size: 62.5%;
+}
+
+.line-space {
+    margin: 20px;
+}
+
+/*--------------------------------- MENUS ---------------------------------*/
+/*-- CLASSIC BAR MAIN MENU --*/
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #ebebeb; /*Light grey*/
+}
+nav ul {
+    width: 100%;
+    list-style: none;
+    padding: 0em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  nav a:link, nav a:visited {
+    color: #1f1e1e;
+    height: 100%;
+  }
+  nav a:hover,  nav a:active  {
+    color: #000000;
+    height: 100%;
+  }
+  nav a.active {
+    color: #ebebeb;
+    background-color: #1f1e1e;
+    width: 12ch;
+    height: 100%;
+  }
+  nav li {
+    float: left;
+  }
+  nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: 100%;
+  }
+  nav li a:hover {
+    background-color: #404040;
+    color: #ebebeb;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    height: 100%;
+  }
+/*-- END CLASSIC BAR MAIN MENU --*/
+
+/*-- SLIDER MAIN MENU --*/
+  body {
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'Lato', sans-serif;
+    margin: 20px;
+  }
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  .menu {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    cursor: pointer;
+    pointer-events: none;
+    margin: 20px;
+    bottom: 20px;
+    left: 20px;
+  }
+  .menu:hover {
+    pointer-events: all;
+  }
+  .label {
+    display: inline-block;
+    cursor: pointer;
+    pointer-events: all;
+  }
+  .spacer {
+    display: inline-block;
+    width: 80px;
+    margin-left: 15px;
+    margin-right: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+  }
+  .spacer:before {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #686868;
+    height: 1px;
+    width: 0%;
+    transition: width 0.25s ease;
+    transition-delay: 0.7s;
+  }
+  .item {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+    transition-delay: 0;
+  }
+  span {
+    transition: color 0.5s ease;
+  }
+  .item:hover span {
+    color: #ff0000;
+  }
+  .menu:hover .spacer:before {
+    width: 100%;
+    transition-delay: 0s;
+  }
+  .menu:hover .item {
+    opacity: 1;
+    top: 0px;
+  }
+  .item:nth-child(1) {
+    transition-delay: 0.45s;
+  }
+  .item:nth-child(2) {
+    transition-delay: 0.4s;
+  }
+  .item:nth-child(3) {
+    transition-delay: 0.35s;
+  }
+  .item:nth-child(4) {
+    transition-delay: 0.3s;
+  }
+  .item:nth-child(5) {
+    transition-delay: 0.25s;
+  }
+  .item:nth-child(6) {
+    transition-delay: 0.2s;
+  }
+  .item:nth-child(7) {
+    transition-delay: 0.15s;
+  }
+  .item:nth-child(8) {
+    transition-delay: 0.1s;
+  }
+  .item:nth-child(9) {
+    transition-delay: 0.05s;
+  }
+  .item:nth-child(10) {
+    transition-delay: 0s;
+  }
+  .menu:hover .item:nth-child(1) {
+    transition-delay: 0.25s;
+  }
+  .menu:hover .item:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+  .menu:hover .item:nth-child(3) {
+    transition-delay: 0.35s;
+  }
+  .menu:hover .item:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  .menu:hover .item:nth-child(5) {
+    transition-delay: 0.45s;
+  }
+  .menu:hover .item:nth-child(6) {
+    transition-delay: 0.5s;
+  }
+  .menu:hover .item:nth-child(7) {
+    transition-delay: 0.55s;
+  }
+  .menu:hover .item:nth-child(8) {
+    transition-delay: 0.6s;
+  }
+  .menu:hover .item:nth-child(9) {
+    transition-delay: 0.65s;
+  }
+  .menu:hover .item:nth-child(10) {
+    transition-delay: 0.7s;
+  }
+/*-- END SLIDER MAIN MENU --*/
+
+/*--------------------------------- BUTTONS ---------------------------------*/
+/*-- RISING BUTTON --*/
+   .simple-button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    width: 30ch;
+  }
+  .simple-button:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  .simple-button:active {
+    transform: translateY(-1px);
+  }
+/*-- END RISING BUTTON --*/
+
+/*-- COLOR CHANGE BUTTON --*/
+   .color-change-button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    width: 20ch;
+    text-align: center;
+   }
+   .color-change-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   .color-change-button:hover {
+    color: #e8e8e8;
+   }
+   .color-change-button:hover::before {
+    width: 100%;
+   }
+/*-- END COLOR CHANGE BUTTON --*/
+
+/*-- SQUARE BUTTON --*/
+   .square-button {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    border: 3px solid rgb(252, 70, 100);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+   }
+   
+   .square-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 70, 100);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+   }
+   
+   .square-button:hover::before {
+    transform: translateX(0);
+   }
+/*-- END SQUARE BUTTON --*/
+
+/*-- TOGGLE SWITCH --*/
+   .switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+   }
+   
+   /* Hide default HTML checkbox */
+   .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+   }
+   
+   /* The slider */
+   .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 30px;
+   }
+   
+   .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: white;
+    transition: .4s;
+   }
+   
+   input:checked + .slider {
+    background-color: #2196F3;
+   }
+   
+   input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+   }
+   
+   input:checked + .slider:before {
+    transform: translateX(1.5em);
+   }
+/*-- END TOGGLE SWITCH --*/
+
+
+/*--------------------------------- TYPOGRAPHY ---------------------------------*/
+/*-- IMPORT FONTS: Lato, Montserrat, Oswald, Bitter--*/
+/*-- You can import multiple at a time with the same import statement by each 'family=blahblah' after one another --*/
+/*-- https://fonts.google.com to build a font pack, automatically gives you an import statment --*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue'); /* Headline Sans Serif Caps */
+@import url('https://fonts.googleapis.com/css?family=Lato'); /* Sans Serif */
+@import url('https://fonts.googleapis.com/css2?family=Lora'); /* Soft Edge Serif */
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento'); /* Sharp Elegant Serif */
+
+   .threeD {
+    top: 50%; 
+    right: 50%;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue';
+    font-size: 7em;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+
+   .color-gradient-text {
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #231557 0%,
+     #44107a 29%,
+     #ff1361 67%,
+     #fff800 100%
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 200% auto;
+   color: #fff;
+   background-clip: text;
+   text-fill-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+       font-size: 7em;
+       font-family: 'Lato';
+ }
+     @keyframes textclip {
+        to {
+         background-position: 200% center;
+         }
+        }
+
+
+   .neon {
+    font-size: 7em;
+    font-family: 'Lato';
+    color: #fff;
+    text-shadow:
+          0 0 7px #fff,
+          0 0 10px #fff,
+          0 0 21px #fff,
+          0 0 42px rgb(0, 128, 255),
+          0 0 82px rgb(0, 128, 255),
+          0 0 92px rgb(0, 128, 255),
+          0 0 102px rgb(0, 128, 255),
+          0 0 151px rgb(0, 128, 255);
+   }
+
+   .title {
+    font-family: 'Lora', serif;
+    font-weight: 900;
+    font-size: 5em;
+    color: #000000
+   }
+
+   .subtitle {
+    font-family: 'Quattrocento', serif;
+    font-weight: 300;
+    font-size: 3em;
+    color: #252525
+   }
+
+
+/*--------------------------------- CARDS ---------------------------------*/
+/* Floating Card */
+.floating-card {
+    width: 200px;
+    height: 260px;
+    background-color: #ffffff;
+    box-shadow: 15px 15px 30px #767676,
+                 -15px -15px 30px #e6e6e6;
+    transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+                 transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+   }
+   
+   .floating-card:hover {
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    transform: scale(1.05);
+   }
+
+/* Sliding Card with Text */
+.slide-down-card {
+    height: 254px;
+    width: 190px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow: 0 0 20px 8px #d0d0d0;
+   }
+   
+    /*Image*/
+   .card-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: #0a3394;
+    background: linear-gradient(to top, #0a3394, #4286f4);
+    border-radius: 1em 1em 1em 1em;
+   }
+   
+   /*Description */
+   .card-description {
+    display: flex;
+    position: absolute;
+    gap: 1em;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    height: 70%;
+    bottom: 0;
+    border-radius: 1em 1em 1em 1em;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 1rem;
+   }
+   
+   /*Text*/
+   .card-text-title {
+    font-size: 1.4em;
+    font-weight: 700;
+   }
+   
+   .card-text-body {
+    font-size: 1em;
+    line-height: 150%;
+   }
+   
+   /* Hover states */
+   .slide-down-card:hover .card-description {
+    transform: translateY(100%);
+   }
+   
+   
