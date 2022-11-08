@@ -1,0 +1,414 @@
+:root {/*-- sets color variables --*/
+  --dark: #444;
+  --ltmid: #DDD;
+  --dkmid: #999;
+  --light: #F9F9F9;
+  --accent: #6495ed;
+}
+body {
+  color: var(--dark); /*-- sets body default font color --*/
+  line-height: 1.4; /*-- sets body default line height --*/
+}
+/*-- default styles for links (in the correct order) --*/
+a {color: var(--accent); font-weight: 500; text-decoration: none; transition: all .2s ease-in-out;}
+a:visited {color:#305eb3;}
+a:hover {color: var(--accent);}
+a:active {color: var(--dkmid);}
+
+header.top-nav { /*-- main nav styles --*/
+  background-color: var(--ltmid); /*-- nav background --*/
+  padding: 1rem 2rem 1rem 0; /*-- inside padding --*/
+  display: flex; /*-- header bar is a flex container --*/
+  min-height: 8rem; /*-- header bar has a minimum height --*/
+  justify-content: space-between; /*-- main axis space distribution --*/
+  align-items: center; /*-- cross axis space distribution --*/
+  position: relative; /*-- needed to absolutly position some children --*/
+}
+nav { /*-- targets the links wrapper --*/
+  flex-basis: 30%; /*-- gives this flex child an ideal width --*/
+  display: flex; /*-- makes the child also a flex container --*/
+  justify-content: space-between; /*-- main axis space distribution --*/
+}
+a.nav-link { /*-- targets individual links --*/
+  padding-left: 2.8rem; /*-- sets some minimum padding --*/
+  color: var(--dark); /*-- text color --*/
+  font-weight: 500; /*-- text weight --*/
+  text-decoration: none; /*-- removes underlines --*/
+  transition: all .2s ease-in-out; /*-- sets a transition for hover effects --*/
+}
+a.nav-link:hover {
+  color: var(--accent);  /*-- color on hover --*/
+}
+a.nav-link.logo {  /*-- just the site title --*/
+  text-transform: uppercase; /*-- makes all caps --*/
+  font-weight: 900; /*-- set to heaviest font --*/
+}
+a#trigram { /*-- hamburger menu icon --*/
+  display: none;  /*-- default display is none --*/
+}
+a#trigram::before { /*-- uses ::before to change the menu icon --*/
+  content: '\2630'; /*-- sets it to show the hamburger icon --*/
+  font-size: 4rem; /*-- makes it very large --*/
+  position: relative; /*-- posititions it explicitly --*/
+  top: -.5rem; /*-- a little space from the top --*/
+  right: 0; /*-- flush right --*/
+}
+
+
+/* align items right */
+
+
+
+@media screen and (min-width: 768px) { /*-- shows nav items when screen is over 768px --*/
+  .nav-wrap a {display: flex;}
+}
+
+@media screen and (max-width: 767px) { /*-- hide nav items when screen is in mobile mode, adds in trigram --*/
+  .nav-wrap a {display: none;}
+  .nav-wrap a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: .25em; background:#ffffff;}
+}
+
+@media screen and (max-width: 767px) { /*-- responsive stuff for js in mobile form --*/
+  a.nav-link.logo {display: none;}
+  .nav-wrap.responsive {flex-direction: column;}
+  .nav-wrap.responsive a {display: inherit;}
+  .nav-wrap.responsive a:not(:last-child) {display:inherit; padding-top:1em;}
+  .nav-wrap.responsive a.trigram {visibility:hidden; transition:none;} /*-- hides trigram when open --*/
+  .nav-wrap.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;} /*-- replaces trigram sign with x-sign on mobile. --*/
+/* figure out how to align the menu in the right place */
+}
+
+main {
+  padding: 1rem 2rem; /*-- adds inside space around the main content area --*/
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
+.hero {
+  padding: 4rem 0; /*-- top and bottom padding for the container --*/
+  display: flex; /*-- declares a flex container --*/
+  flex-direction: column; /*-- direction downward --*/
+  justify-content: center; /*-- vertical center --*/
+  align-items: center; /*-- horizontal center --*/
+  background-color: var(--ltmid); /*-- light color --*/
+  width: 100vw; /*-- extra wide --*/
+  margin: 2rem 0 1rem -2rem; /*-- negative right margin compensates for extra width --*/
+}
+.hero > * { /*-- targets all direct children of .hero --*/
+  margin: 0; /*-- zeroes their margins --*/
+  padding: 0; /*-- zeroes their padding --*/
+}
+
+/*-- ----------
+- GRID STYLES -
+---------------*/
+.main-grid {
+  margin-top: 3.5rem; /*-- adds space above grid wrap --*/
+  display: grid; /*-- sets display mode --*/
+  grid-gap: 1.5rem; /*-- creates gutters --*/
+  grid-template-columns: 1fr; /*-- default mobile layout is 1-column--*/
+}
+/*-- grid media queries--*/
+@media screen and (min-width: 550px) { /*-- at screens between 550 and 767 --*/
+  body {width: 100%;}
+  .main-grid {grid-template-columns: repeat(2, 1fr);}  /*-- 2 columnns --*/
+}
+@media screen and (min-width: 768px) {/*-- at screens between 768 and 989 --*/
+  body {width: 100%;}
+  .main-grid {grid-template-columns: repeat(3, 1fr);} /*-- 3 columnns --*/
+}
+@media screen and (min-width: 990px) {/*-- at screens between 990 and 1271 --*/
+  body {width: 100%;}
+  .main-grid {grid-template-columns: repeat(4, 1fr);} /*-- 4 columnns --*/
+}
+@media screen and (min-width: 1280px) {/*-- at screens 1280 and above --*/
+  body {width: 100%;}
+  .main-grid {grid-template-columns: repeat(4, 1fr);} /*-- 4 columnns --*/
+}
+/*-- media card styles -- */
+.main-grid-item {
+  border-radius: 4px;  /*-- rounds borders --*/
+  padding: .5em; /*-- adds space inside --*/
+  background-color: var(--bg);
+}
+.thumb {
+  padding-bottom: 56%; /*-- creates ~16:9 ratio--*/
+  background-size: cover; /*--sets image to cover background --*/
+  background-position: center center; /*-- positions image horiz. and vert. center --*/
+  border-radius: 4px 4px 0 0; /*-- rounds top-left and top-right edges --*/
+}
+
+.grid-cont { /*-- styles the main grid container for media cards --*/
+  padding: 2rem 0; /*-- top and bottom padding for the grid container --*/
+  display: grid; /*-- declares this a grid container --*/
+  grid-gap: 2rem; /*-- 2rem top, right, bottom, and left gaps between items --*/
+  grid-template-columns: 1fr; /*-- by default, there is 1 column that's 1fr wide --*/
+}
+@media screen and (min-width: 550px) { /*-- at slightly larger size, there are two equal columns --*/
+  .grid-cont {grid-template-columns: repeat(2, 1fr);}
+}
+@media screen and (min-width: 768px) { /*-- still two equal columns --*/
+  .grid-cont {grid-template-columns: repeat(2, 1fr);}
+}
+@media screen and (min-width: 1280px) { /*-- next size up, there are three equal columns --*/
+  .grid-cont {grid-template-columns: repeat(3, 1fr);}
+}
+@media screen and (min-width: 1440px) { /*-- at the largest sizes, there are four equal columns --*/
+  .grid-cont {grid-template-columns: repeat(4, 1fr);}
+}
+.card { /*-- selects .card elements --*/
+  padding: 2%; /*-- a little bit of flexible space inside the card --*/
+  display: flex; /*-- card is a flex container --*/
+  flex-direction: column; /*-- flow is downward --*/
+  border-radius: 8px; /*-- curved edges --*/
+  border: 2px dashed var(--dkmid); /*-- dashed border --*/
+  background-color: var(--light); /*-- a little bit of light color --*/
+}
+.card img { /*-- selects image children of .card --*/
+  width: 100%; /*-- full width of container --*/
+  height: auto; /*-- maintain aspect ratio --*/
+  max-height: 320px; /*-- can't be too tall --*/
+  border-radius: 8px 8px 0 0; /*-- curved corners, but just on the top --*/
+}
+.card button { /*-- selects button children of .card elements --*/
+  width: 30%; /*-- 1/3rd width of parent (the .card) --*/
+  min-width: 6rem; /*-- can't be too narrow --*/
+  margin: 2rem auto; /*-- centered it --*/
+  padding: 1rem 2rem; /*-- makes space inside the button --*/
+  cursor: pointer; /*-- changes the mouse cursor from arrow to pointer --*/
+}
+footer { /*-- just some footer styles, nothing weird --*/
+  margin-top: 2rem; /*-- adds space above --*/
+  background-color: var(--ltmid); /*-- light mid color --*/
+  padding: 1rem 2rem; /*-- inside space to match the nav --*/
+  display: flex; /*-- might as well --*/
+  height: 6rem; /*-- fixed height  --*/
+  justify-content: space-between; /*-- horizontal center --*/
+  align-items: center; /*-- vertical center --*/
+}
+footer p { /*-- targets the footer text --*/
+  width: 100%; /*-- p elements are full width of the container --*/
+  text-align: center; /*-- centers the text --*/
+  font-weight: 500; /*-- mid-weight font --*/
+}
+
+
+/*-- Card Backgrounds --*/
+.one .thumb {background-image: url('https://picsum.photos/300/200/?image=0');}
+.two .thumb {background-image: url('https://picsum.photos/300/200/?image=24');}
+.three .thumb {background-image: url('https://picsum.photos/300/200/?image=35');}
+.four .thumb {background-image: url('https://picsum.photos/300/200/?image=44');}
+.five .thumb {background-image: url('https://picsum.photos/300/200/?image=54');}
+.six .thumb {background-image: url('https://picsum.photos/300/200/?image=59');}
+.seven .thumb {background-image: url('https://picsum.photos/300/200/?image=71');}
+.eight .thumb {background-image: url('https://picsum.photos/300/200/?image=32');}
+.nine .thumb {background-image: url('https://picsum.photos/300/200/?image=19');}
+.ten .thumb {background-image: url('https://picsum.photos/300/200/?image=113');}
+.eleven .thumb {background-image: url('https://picsum.photos/300/200/?image=23');}
+.twelve .thumb {background-image: url('https://picsum.photos/300/200/?image=60');}
+/*----*/
+.card-content {
+  padding: 0 .5em .7em .5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*-- vertically centers card content --*/
+}
+.card-title {
+  margin: 1rem 0 0 0;
+  text-transform: uppercase; /*--all caps text --*/
+  align-self: flex-start; /*-- positions at beginning --*/
+  color: var(--text);
+}
+.card-text {
+  font-size: .80em;
+  line-height: 1.2;
+  align-self: flex-start;
+  color: var(--text);
+}
+button.card-more {
+  background: transparent;
+  padding: .45em .7em .4em .7em;
+  border-radius: 200px;
+  font-size: .7em;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+button.card-more, button.card-more:visited {
+  color: var(--prime);
+  border: 1.5px solid var(--prime);
+  transition: all 250ms ease-in-out;
+}
+button.card-more:hover, button.card-more:active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+
+/*-- Modal Styles --*/
+/* The Modal (background) */
+.modal {
+  display: none;/*-- hidden by default --*/
+  position: fixed; /*-- doesn't move on the screen --*/
+  z-index: 1100; /*-- sets higher than anything else so modal is in the very front --*/
+  left: 0; /*-- positions at zero pixels from the left --*/
+  top: 0; /*-- positions at zero pixels from the top --*/
+  width: 100%; /*-- fills the space --*/
+  height: 100%; /*-- fills the space --*/
+  overflow: auto; /*-- handles overflow as normal. --*/
+  background-color: rgba(10, 10, 10, .4); /*--slightly transparent--*/
+}
+.modal-content {
+  background-color: var(--dark);
+  color: var(--light);
+  margin: 1rem auto;
+  padding: 1em;
+  width: 92%;
+  border-radius: 4px;
+  animation: fadein .3s ease-in-out; /*-- sets animation properties: name, duration, easing --*/
+}
+@keyframes fadein {
+ from{transform:scale(.1);} /*-- modal grows from very small to full size--*/
+}
+.close {
+  color: var(--text);
+  font-size: 2.5em;
+  font-weight: bold;
+  position: absolute; /*-- always at the top right of the modal --*/
+  top: 5px;
+  right: 4.25%;
+  transition: all .2s ease-in;
+  text-shadow: 2px 2px 5px #FAFAFA,
+              -2px -2px 5px #FAFAFA,
+              2px -2px 5px #FAFAFA,
+              -2px 2px 5px #FAFAFA;
+}
+.close:hover,
+.close:focus {
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-body {
+ display: grid;
+ grid-template-columns: 1fr; /*-- default modal grid (for mobile screens)--*/
+ grid-gap: 2em;
+}
+.eg-text {
+ align-self: center;
+}
+.eg-text h3 {
+ margin-top: 0;
+ padding-top: 0;
+}
+.modal-body img {
+ margin-bottom: 1.5em;
+ width: 100%;
+ height: auto;
+}
+@media screen and (min-width: 1280px) { /*-- better modal display on largest screens --*/
+ .modal-body {grid-template-columns: 7fr 5fr;}
+}
+
+/*-- Footer Styles --*/
+footer {
+ background-color: var(--prime);
+ padding: .25rem;
+ color: var(--rev-text);
+ text-align: center;
+}
+footer a {
+ color: var(--rev-text);
+}
+footer a:hover {
+ color: var(--rev-accent);
+}
