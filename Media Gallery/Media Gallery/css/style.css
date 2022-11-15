@@ -55,10 +55,6 @@ a#trigram::before { /*-- uses ::before to change the menu icon --*/
 }
 
 
-/* align items right */
-
-
-
 @media screen and (min-width: 768px) { /*-- shows nav items when screen is over 768px --*/
   .nav-wrap a {display: flex;}
 }
@@ -75,7 +71,6 @@ a#trigram::before { /*-- uses ::before to change the menu icon --*/
   .nav-wrap.responsive a:not(:last-child) {display:inherit; padding-top:1em;}
   .nav-wrap.responsive a.trigram {visibility:hidden; transition:none;} /*-- hides trigram when open --*/
   .nav-wrap.responsive a.trigram:after {content:'\000D7'; visibility:visible; text-indent: -.5em;} /*-- replaces trigram sign with x-sign on mobile. --*/
-/* figure out how to align the menu in the right place */
 }
 
 main {
